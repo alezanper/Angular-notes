@@ -9,6 +9,8 @@ export class AppComponent {
   newitem = '';
   items = [];
 
+  show: boolean = true;
+
   addItem(){
     this.items.push(this.newitem);
   }

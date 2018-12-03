@@ -3,22 +3,23 @@
     <div class="col-xl-12">
       <h1>Shopping List</h1>
 
-      <label>What's need on list?</label>
+      <label>What's new on list?</label>
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="New item" [(ngModel)]="newitem">
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" (click)=addItem()>Add</button>
+          <button class="btn btn-success" (click)=addItem()>Add</button>
+          <button class="btn btn-primary" (click)="show = !show">{{show ? 'Hide List' : 'Show List'}}</button>
         </div>
       </div>
     </div>
   </div>
   <br />
   <div class="row">
-    <div class="col-xl-12">
+    <div *ngIf="show" class="col-xl-12">
       <div class="input-group mb-3" *ngFor="let item of items; let i = index">
         <output type="text" class="form-control">{{item}}</output>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" (click)="removeItem(i)">Delete</button>
+          <button class="btn btn-danger" (click)="removeItem(i)">Delete</button>
         </div>
       </div>
     </div>
