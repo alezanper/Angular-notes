@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <br />
+  <h2 *ngIf="show">Current List</h2>
   <div class="row">
     <div *ngIf="show" class="col-xl-12">
       <div class="input-group mb-3" *ngFor="let item of items; let i = index">
