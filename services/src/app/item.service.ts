@@ -1,5 +1,6 @@
 import { Item } from './item';
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,8 @@ export class ItemService {
 
   constructor() { }
 
-  getItems(): Item[]{
-    return this.items;
+  //Returning an observable allow us to make an asynchronous request
+  getItems(): Observable<Item[]>{
+    return of(this.items);
   }
 }
