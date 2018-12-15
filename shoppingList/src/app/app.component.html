@@ -6,7 +6,7 @@
       <div class="input-group mb-3">
         <!--ngModel needs to import { FormsModule } from '@angular/forms'; in module -->
         <!--Two way data binding useful for capture and handle change event -->
-        <input type="text" class="form-control" placeholder="New item" [(ngModel)]="newitem">
+        <input type="text" class="form-control" placeholder="New item" [(ngModel)]="newitem.name">
         <div class="input-group-append">
           <!--(click) handles the click event, in this case it calls the method addItem() from ts file -->
           <button class="btn btn-success" (click)=addItem()>Add</button>
@@ -22,7 +22,7 @@
     <div *ngIf="show" class="col-xl-12">
       <!--*ngFor let us to show a list according to Typescript object -->
       <div class="input-group mb-3" *ngFor="let item of items; let i = index">
-        <output type="text" class="form-control">{{item}}</output>
+        <output type="text" class="form-control">{{item.name}}</output>
         <div class="input-group-append">
           <button class="btn btn-danger" (click)="removeItem(i)">Delete</button>
         </div>
