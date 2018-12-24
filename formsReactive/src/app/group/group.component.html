@@ -1,0 +1,24 @@
+<div class="container">
+  <form [formGroup]="groupForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-xl-12">
+        <label>
+          Name:
+        </label>
+        <input class="form-control" type="text" formControlName="nameControl">
+        <label>
+          Last Name:
+        </label>
+        <input class="form-control" type="text" formControlName="lastNameControl">
+        <label>
+            Email:
+          </label>
+          <input class="form-control" type="email" formControlName="emailControl">
+        <br>
+
+        <button class = "btn btn-primary" type="submit" [disabled] = "!groupForm.valid">Submit</button>
+
+      </div>
+    </div>
+  </form>
+</div>

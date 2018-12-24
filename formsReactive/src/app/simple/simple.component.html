@@ -1,3 +1,13 @@
-<p>
-  simple works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <br>
+      <label>
+        Name:
+      </label>
+      <input class="form-control" type="text" [formControl]="nameControl">
+      <p> Value: {{ nameControl.value }}</p>
+      <button class="btn btn-primary" (click) = "updateName()">Update</button>
+    </div>
+  </div>
+</div>

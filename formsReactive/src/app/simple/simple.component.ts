@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-simple',
@@ -10,6 +11,12 @@ export class SimpleComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  nameControl = new FormControl('');
+
+  updateName() {
+    this.nameControl.setValue('Some Name');
   }
 
 }

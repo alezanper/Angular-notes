@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,5 @@ import { FormControl } from '@angular/forms'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nameControl = new FormControl('');
-
-  updateName() {
-    this.nameControl.setValue('Nancy');
-  }
+  
 }
